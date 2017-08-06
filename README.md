@@ -5,7 +5,7 @@
 This is the fundamental project, to serve, experience, and test Polymer components
 in both development and production environment.
 
-### Setup
+## Setup
 
 #### Prerequisites
 
@@ -22,14 +22,14 @@ Second, install [Bower](https://bower.io/) using [npm](https://www.npmjs.com)
 
     bower install
 
-### Start the development server
+## Start the development server
 
 This command serves the app at `http://127.0.0.1:8081` and provides basic URL
 routing for the app:
 
     polymer serve
 
-### Build
+## Build
 
 The `polymer build` command builds your Polymer application for production, using build configuration options provided by the command line or in your project's `polymer.json` file.
 
@@ -48,15 +48,16 @@ build/
 * `bundled` is a bundled, minified build with a service worker. ES6 code is served as-is. This build is for browsers that can handle ES6 code - see [building your project for production](https://www.polymer-project.org/2.0/toolbox/build-for-production#compiling) for a list.
 * `unbundled` is an unbundled, minified build with a service worker. ES6 code is served as-is. This build is for browsers that support HTTP/2 push.
 
-Run `polymer help build` for the full list of available options and optimizations. Also, see the documentation on the [polymer.json specification](https://www.polymer-project.org/2.0/docs/tools/polymer-json) and [building your Polymer application for production](https://www.polymer-project.org/2.0/toolbox/build-for-production).
 
-### Preview the build
+## Preview the build
 
-This command serves your app. Replace `build-folder-name` with the folder name of the build you want to serve.
+This command serves your app.
 
-    polymer serve build/build-folder-name/
+    polymer serve build/es5/
+    polymer serve build/bundled/
+    polymer serve build/unbundled/
 
-### Run tests
+## Run tests
 
 This command will run [Web Component Tester](https://github.com/Polymer/web-component-tester)
 against the browsers currently installed on your machine:
@@ -70,7 +71,7 @@ If running Windows you will need to set the following environment variables:
 
 Read More here [daffl/launchpad](https://github.com/daffl/launchpad#environment-variables-impacting-local-browsers-detection)
 
-### Adding a new view
+## Adding a new view
 
 You can extend the app by adding more views that will be demand-loaded
 e.g. based on the route, or to progressively render non-critical sections of the
