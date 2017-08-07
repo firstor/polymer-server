@@ -2,6 +2,11 @@
   "name": "polymer-server",
   "license": "BSD-3-Clause",
   "scripts": {
+    "start": "polymer serve --port 3333",
+    "build:prod": "polymer build",
+    "start:es5": "polymer serve build/es5/ --port 3333",
+    "start:bundled": "polymer serve build/bundled/ --port 3333",
+    "start:unbundled": "polymer serve build/unbundled/ --port 3333",
     "lint": "npm run lint:javascript && polymer lint",
     "lint:javascript": "eslint . --ext js,html --ignore-path .gitignore",
     "test": "polymer test",
