@@ -22,7 +22,7 @@ Second, install [Bower](https://bower.io/) globally using [npm](https://www.npmj
 
 ## Start the development server
 
-This command serves the app at `http://localhost:3333` and provides basic URL
+This command serves the app at `http://localhost:3030` and provides basic URL
 routing for the app:
 
     npm run start
