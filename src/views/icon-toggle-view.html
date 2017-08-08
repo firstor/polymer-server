@@ -15,9 +15,21 @@
         <h1>&lt;icon-toggle&gt;</h1>
         <a class="version" href="https://github.com/first87/icon-toggle">v0.0.1</a>
       </div>
+
       <div class="contents">
-        <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
-        <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+
+        <h3>Statically-configured icon-toggles</h3>
+        <div class="snippet">
+          <icon-toggle toggle-icon="star"></icon-toggle>
+          <icon-toggle toggle-icon="star" pressed></icon-toggle>
+        </div>
+
+        <h3>Data-bound icon-toggle</h3>
+        <div class="snippet">
+          <div><span>[[_message(isFavorite)]]</span></div>
+          <icon-toggle toggle-icon="favorite" pressed="{{isFavorite}}"></icon-toggle>
+        </div>
+
       </div>
     </div>
   </template>
@@ -25,6 +37,14 @@
   <script>
     class IconToggleView extends Polymer.Element {
       static get is() { return 'icon-toggle-view'; }
+      _message(fav) {
+        if (fav) {
+          return 'You really like me!';
+        }
+        else {
+          return 'Do you like me?';
+        }
+      }
     }
 
     window.customElements.define(IconToggleView.is, IconToggleView);
