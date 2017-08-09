@@ -22,16 +22,10 @@
 
       <div class="contents">
 
-        <h3>Statically-configured icon-toggles</h3>
+        <h3>Opening basic dialog</h3>
         <div class="snippet">
-          <icon-toggle toggle-icon="star"></icon-toggle>
-          <icon-toggle toggle-icon="star" pressed></icon-toggle>
-        </div>
-
-        <h3>Data-bound icon-toggle</h3>
-        <div class="snippet">
-          <div><span>[[_message(isFavorite)]]</span></div>
-          <icon-toggle toggle-icon="favorite" pressed="{{isFavorite}}"></icon-toggle>
+          <komed-dialog-base id="basicDialog" title="Basic dialog">Welcome!</komed-dialog-base>
+          <paper-button on-click="openBasicDialog" raised>Open</paper-button>
         </div>
 
       </div>
@@ -41,13 +35,8 @@
   <script>
     class KomedDialogBaseView extends Polymer.Element {
       static get is() { return 'komed-dialog-base-view'; }
-      _message(fav) {
-        if (fav) {
-          return 'You really like me!';
-        }
-        else {
-          return 'Do you like me?';
-        }
+      openBasicDialog() {
+        this.$.basicDialog.open();
       }
     }
 
