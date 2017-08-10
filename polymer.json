@@ -4,7 +4,7 @@
   "fragments": [
     "src/e404.html",
     "src/views/icon-toggle-view.html",
-    "src/views/komed-dialog-base-view.html"
+    "src/views/komed-dialog-view.html"
   ],
   "sources": [
     "src/**/*",
