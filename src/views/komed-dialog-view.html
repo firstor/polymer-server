@@ -1,0 +1,40 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../shared-styles.html">
+
+<dom-module id="komed-dialog-view">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+    </style>
+
+    <div class="card">
+      <div class="header">
+        <h1>&lt;komed-dialog&gt;</h1>
+        <a class="version" href="https://github.com/first87/komed-dialog">v0.0.2</a>
+      </div>
+
+      <div class="contents">
+
+        <h3>Action dialog</h3>
+        <div class="snippet">
+          <komed-action-dialog id="actionDialog" title="Action dialog">Welcome!</komed-action-dialog>
+          <paper-button on-click="openActionDialog" raised>Open</paper-button>
+        </div>
+
+      </div>
+    </div>
+  </template>
+
+  <script>
+    class KomedDialogView extends Polymer.Element {
+      static get is() { return 'komed-dialog-view'; }
+      openActionDialog() {
+        this.$.actionDialog.open();
+      }
+    }
+
+    window.customElements.define(KomedDialogView.is, KomedDialogView);
+  </script>
+</dom-module>

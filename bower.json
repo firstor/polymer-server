@@ -17,7 +17,7 @@
     "polymer": "Polymer/polymer#2.0.1",
     "webcomponentsjs": "webcomponents/webcomponentsjs#1.0.1",
     "icon-toggle": "first87/icon-toggle#0.0.2",
-    "komed-dialog-base": "first87/komed-dialog-base#0.0.1"
+    "komed-dialog": "first87/komed-dialog#0.0.2"
   },
   "resolutions": {
     "polymer": "2.0.1",
