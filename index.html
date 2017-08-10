@@ -91,15 +91,44 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <link rel="import" href="src/main.html">
 
     <!-- Add any global styles for body, document, etc. -->
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Roboto', 'Noto', sans-serif;
-        line-height: 1.5;
-        min-height: 100vh;
-        background-color: #eeeeee;
-      }
-    </style>
+    <custom-style>
+      <style>
+        html {
+          /**
+           * Styles for komed-dialog-base
+           *
+           * Please note that the dialog instance is attached to the document body
+           * Also should define styles here for make them fully work on IE+Edge
+           */
+          --komed-dialog: {
+            padding: 10px;
+            overflow: scroll;
+            font-size: 1.2em;
+          };
+          --komed-dialog-color: #006100;
+          --komed-dialog-max-width: 640px;
+          --komed-dialog-max-height: 480px;
+          --komed-dialog-title: {
+            font-size: 1.5em;
+            line-height: 1.5em;
+          };
+          --komed-dialog-title-color: green;
+          --komed-dialog-close: {
+            margin: 10px;
+          };
+          --komed-dialog-close-color: green;
+          --komed-dialog-close-size: 48px;
+        }
+
+        body {
+          margin: 0;
+          font-family: 'Roboto', 'Noto', sans-serif;
+          line-height: 1.5;
+          min-height: 100vh;
+          background-color: #eeeeee;
+        }
+      </style>
+    </custom-style>
   </head>
   <body>
     <ps-app></ps-app>

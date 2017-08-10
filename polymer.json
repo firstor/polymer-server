@@ -3,7 +3,8 @@
   "shell": "src/main.html",
   "fragments": [
     "src/e404.html",
-    "src/views/icon-toggle-view.html"
+    "src/views/icon-toggle-view.html",
+    "src/views/komed-dialog-base-view.html"
   ],
   "sources": [
     "src/**/*",
