@@ -12,7 +12,7 @@
     <div class="card">
       <div class="header">
         <h1>&lt;komed-dialog&gt;</h1>
-        <a class="version" href="https://github.com/first87/komed-dialog">v0.0.2</a>
+        <a class="version" href="https://github.com/first87/komed-dialog">v0.0.3</a>
       </div>
 
       <div class="contents">
@@ -21,6 +21,19 @@
         <div class="snippet">
           <komed-action-dialog id="actionDialog" title="Action dialog">Welcome!</komed-action-dialog>
           <paper-button on-click="openActionDialog" raised>Open</paper-button>
+        </div>
+
+        <h3>Confirm dialog</h3>
+        <div class="snippet">
+          <komed-confirm-dialog id="confirmDialog"
+                                title="Confirm dialog"
+                                confirm-title="Agree"
+                                dismiss-title="Disagree"
+                                on-confirm="confirmed"
+                                on-dismiss="dismissed">
+            Do you agree?
+          </komed-confirm-dialog>
+          <paper-button on-click="openConfirmDialog" raised>Open</paper-button>
         </div>
 
       </div>
@@ -32,6 +45,15 @@
       static get is() { return 'komed-dialog-view'; }
       openActionDialog() {
         this.$.actionDialog.open();
+      }
+      openConfirmDialog() {
+        this.$.confirmDialog.open();
+      }
+      confirmed() {
+        alert('Agreed!');
+      }
+      dismissed() {
+        alert('Disagreed!');
       }
     }
 
