@@ -12,7 +12,7 @@
     <div class="card">
       <div class="header">
         <h1>&lt;komed-dialog&gt;</h1>
-        <a class="version" href="https://github.com/first87/komed-dialog">v0.0.3</a>
+        <a class="version" href="https://github.com/first87/komed-dialog">v0.0.5</a>
       </div>
 
       <div class="contents">
@@ -25,12 +25,14 @@
 
         <h3>Confirm dialog</h3>
         <div class="snippet">
+          <p>Dialog opened: <b>[[dialogOpened]]</b></p>
           <komed-confirm-dialog id="confirmDialog"
                                 title="Confirm dialog"
                                 confirm-title="Agree"
                                 dismiss-title="Disagree"
                                 on-confirm="confirmed"
-                                on-dismiss="dismissed">
+                                on-dismiss="dismissed"
+                                opened="{{dialogOpened}}">
             Do you agree?
           </komed-confirm-dialog>
           <paper-button on-click="openConfirmDialog" raised>Open</paper-button>
