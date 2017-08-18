@@ -1,0 +1,37 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../shared-styles.html">
+
+<dom-module id="paper-search-view">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+    </style>
+
+    <div class="card">
+      <div class="header">
+        <h1>&lt;paper-search&gt;</h1>
+        <a class="version" href="https://github.com/Collaborne/paper-search">v2.0.6</a>
+      </div>
+
+      <div class="contents">
+
+        <h3>Statically-configured paper-searchs</h3>
+        <div class="snippet">
+          <paper-search toggle-icon="star"></paper-search>
+          <paper-search toggle-icon="star" pressed></paper-search>
+        </div>
+
+      </div>
+    </div>
+  </template>
+
+  <script>
+    class PaperSearchView extends Polymer.Element {
+      static get is() { return 'paper-search-view'; }
+    }
+
+    window.customElements.define(PaperSearchView.is, PaperSearchView);
+  </script>
+</dom-module>
