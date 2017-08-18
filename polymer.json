@@ -4,7 +4,8 @@
   "fragments": [
     "src/e404.html",
     "src/views/icon-toggle-view.html",
-    "src/views/hirst-dialog-view.html"
+    "src/views/hirst-dialog-view.html",
+    "src/views/paper-item-view.html"
   ],
   "sources": [
     "src/**/*",
