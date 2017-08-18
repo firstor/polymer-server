@@ -21,13 +21,15 @@
       paper-item-body {
         color: #0366d6;
         font-size: normal;
-        --paper-item-body-two-line-min-height: 72px;
-        --paper-item-body-three-line-min-height: 84px;
         --paper-item-body-secondary: {
             font-size: small;
             color: #7db9fd;
         };
       }
+
+      [one-line]   { height: var(--paper-item-height-normal); }
+      [two-line]   { height: var(--paper-item-height-twoline); }
+      [three-line] { height: var(--paper-item-height-threeline); }
     </style>
 
     <div class="card">
@@ -40,8 +42,8 @@
 
         <h3>One-, two-, three-lined paper-items</h3>
         <div class="snippet">
-          <paper-item>
-            <paper-item-body>
+          <paper-item one-line>
+            <paper-item-body one-line>
               <div class="title">one-line</div>
             </paper-item-body>
           </paper-item>
