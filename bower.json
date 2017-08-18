@@ -18,7 +18,7 @@
     "webcomponentsjs": "webcomponents/webcomponentsjs#1.0.1",
     "icon-toggle": "first87/icon-toggle#0.0.2",
     "hirst-dialog": "first87/hirst-dialog#1.0.0",
-    "paper-search": "Collaborne/paper-search#2.0.6"
+    "paper-search": "Collaborne/paper-search#2.0.7"
   },
   "resolutions": {
     "polymer": "2.0.1",
