@@ -1,4 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item-body.html">
 <link rel="import" href="../shared-styles.html">
 
 <dom-module id="paper-item-view">
@@ -6,32 +8,37 @@
     <style include="shared-styles">
       :host {
         display: block;
-        --paper-item-color: #ffc7ce;
-        --paper-item-outline-color: #9c0000;
-        --paper-item-pressed-color: purple;
-        --iron-icon-width: 40px;
-        --iron-icon-height: 40px;
       }
     </style>
 
     <div class="card">
       <div class="header">
         <h1>&lt;paper-item&gt;</h1>
-        <a class="version" href="https://github.com/first87/paper-item">v0.0.2</a>
+        <a class="version" href="https://github.com/PolymerElements/paper-item">v2.0.0</a>
       </div>
 
       <div class="contents">
 
-        <h3>Statically-configured paper-items</h3>
+        <h3>One-, two-, three-lined paper-items</h3>
         <div class="snippet">
-          <paper-item toggle-icon="star"></paper-item>
-          <paper-item toggle-icon="star" pressed></paper-item>
-        </div>
-
-        <h3>Data-bound paper-item</h3>
-        <div class="snippet">
-          <div><span>[[_message(isFavorite)]]</span></div>
-          <paper-item toggle-icon="favorite" pressed="{{isFavorite}}"></paper-item>
+          <paper-item>
+            <paper-item-body>
+              <div class="title">one-line</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <paper-item-body two-line>
+              <div class="title">two-line</div>
+              <div class="desc" secondary>description</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <paper-item-body three-line>
+              <div class="title">three-line</div>
+              <div class="desc" secondary>description</div>
+              <div class="desc" secondary>okay</div>
+            </paper-item-body>
+          </paper-item>
         </div>
 
       </div>
@@ -41,14 +48,6 @@
   <script>
     class PaperItemView extends Polymer.Element {
       static get is() { return 'paper-item-view'; }
-      _message(fav) {
-        if (fav) {
-          return 'You really like me!';
-        }
-        else {
-          return 'Do you like me?';
-        }
-      }
     }
 
     window.customElements.define(PaperItemView.is, PaperItemView);
