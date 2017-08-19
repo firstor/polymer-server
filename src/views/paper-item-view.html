@@ -1,0 +1,76 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item-body.html">
+<link rel="import" href="../shared-styles.html">
+
+<dom-module id="paper-item-view">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+
+      paper-item {
+        margin: auto;
+        border: 1px solid #7db9fd;
+        border-radius: 5px;
+        width: 320px;
+        color: red;
+      }
+
+      paper-item-body {
+        color: #0366d6;
+        font-size: normal;
+        --paper-item-body-secondary: {
+            font-size: small;
+            color: #7db9fd;
+        };
+      }
+
+      [one-line]   { height: var(--paper-item-height-normal); }
+      [two-line]   { height: var(--paper-item-height-twoline); }
+      [three-line] { height: var(--paper-item-height-threeline); }
+    </style>
+
+    <div class="card">
+      <div class="header">
+        <h1>&lt;paper-item&gt;</h1>
+        <a class="version" href="https://github.com/PolymerElements/paper-item">v2.0.0</a>
+      </div>
+
+      <div class="contents">
+
+        <h3>One-, two-, three-lined paper-items</h3>
+        <div class="snippet">
+          <paper-item one-line>
+            <paper-item-body one-line>
+              <div class="title">one-line</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <paper-item-body two-line>
+              <div class="title">two-line</div>
+              <div class="desc" secondary>description</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <paper-item-body three-line>
+              <div class="title">three-line</div>
+              <div class="desc" secondary>description</div>
+              <div class="desc" secondary>okay</div>
+            </paper-item-body>
+          </paper-item>
+        </div>
+
+      </div>
+    </div>
+  </template>
+
+  <script>
+    class PaperItemView extends Polymer.Element {
+      static get is() { return 'paper-item-view'; }
+    }
+
+    window.customElements.define(PaperItemView.is, PaperItemView);
+  </script>
+</dom-module>
