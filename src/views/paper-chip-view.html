@@ -1,6 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/paper-item/paper-item.html">
 <link rel="import" href="../../bower_components/paper-chip/paper-chip.html">
+<link rel="import" href="../../bower_components/paper-chip/paper-chip-input.html">
 <link rel="import" href="../shared-styles.html">
 
 <dom-module id="paper-chip-view">
@@ -38,6 +39,18 @@
               <iron-icon icon="icons:favorite"></iron-icon>
             </span>
           </paper-chip>
+        </div>
+
+        <h3>paper-chip-input</h3>
+        <div class="snippet">
+          <paper-chip-input label="+Add (Enter) -Delete (Backspace)" items='["one", "two", "three"]' closable></paper-chip-input>
+
+          <paper-chip-input always-float-label label="+Add (Enter) -Delete (Backspace)">
+            <paper-chip label="Default Tag" slot="input"></paper-chip>
+            <paper-chip label="Default Tag Closable" closable slot="input"></paper-chip>
+          </paper-chip-input>
+
+          <paper-chip-input disabled label="+Add (Enter) -Delete (Backspace)" items='["one", "two", "three"]' closable></paper-chip-input>
         </div>
 
       </div>
