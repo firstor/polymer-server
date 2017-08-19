@@ -21,6 +21,7 @@
 <link rel="lazy-import" href="e404.html">
 <link rel="lazy-import" href="views/icon-toggle-view.html">
 <link rel="lazy-import" href="views/hirst-dialog-view.html">
+<link rel="lazy-import" href="views/paper-item-view.html">
 <link rel="lazy-import" href="views/paper-search-view.html">
 
 <dom-module id="ps-app">
@@ -82,6 +83,7 @@
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="icon-toggle-view" href="[[rootPath]]icon-toggle-view">icon-toggle</a>
           <a name="hirst-dialog-view" href="[[rootPath]]hirst-dialog-view">hirst-dialog</a>
+          <a name="paper-item-view" href="[[rootPath]]paper-item-view">paper-item</a>
           <a name="paper-search-view" href="[[rootPath]]paper-search-view">paper-search</a>
         </iron-selector>
       </app-drawer>
@@ -103,6 +105,7 @@
             role="main">
           <icon-toggle-view name="icon-toggle-view"></icon-toggle-view>
           <hirst-dialog-view name="hirst-dialog-view"></hirst-dialog-view>
+          <paper-item-view name="paper-item-view"></paper-item-view>
           <paper-search-view name="paper-search-view"></paper-search-view>
           <e404-view name="e404-view"></e404-view>
         </iron-pages>
