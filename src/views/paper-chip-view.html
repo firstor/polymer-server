@@ -23,12 +23,21 @@
 
       <div class="contents">
 
-        <h3>paper-chip-bar</h3>
+        <h3>paper-chip</h3>
         <div class="snippet">
-          <paper-chip-bar id="searchBar"
-                            placeholder="Input a keyword"
-                            hide-filter-button="true">
-          </paper-chip-bar>
+          <paper-chip label="Basic with Avatar Text">
+            <span class="chip-background" slot="avatar">
+              <span>T</span>
+            </span>
+          </paper-chip>
+
+          <paper-chip label="Closable" closable></paper-chip>
+
+          <paper-chip label="Closable and icon" closable>
+            <span class="chip-background" slot="avatar">
+              <iron-icon icon="icons:favorite"></iron-icon>
+            </span>
+          </paper-chip>
         </div>
 
       </div>
