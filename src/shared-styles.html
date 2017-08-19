@@ -35,7 +35,8 @@
         display: inline-block;
       }
 
-      .header .version {
+      .header .version,
+      .header .forked {
         margin-left: 10px;
         padding: 0px 10px;
         height: 32px;
@@ -46,6 +47,24 @@
         background-color: #0366d6;
         border-color: #0366d6;
         border-radius: 8px;
+      }
+      .header .forked {
+        background-color: #586069;
+        border-color: #586069;
+        font-weight: normal;
+      }
+      .header .forked::before {
+        content: '';
+        display: inline-block;
+        background-image: url(../images/forked.svg);
+        width: 10px;
+        height: 15px;
+        padding: 0;
+        margin-right: 4px;
+      }
+
+      svg {
+        fill: white !important;
       }
 
       .contents {
