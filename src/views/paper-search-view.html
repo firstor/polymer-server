@@ -1,0 +1,137 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/paper-search/paper-search-panel.html">
+<link rel="import" href="../shared-styles.html">
+
+<dom-module id="paper-search-view">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+      paper-item-body {
+        /* IE 11 fix */
+        height: 0px;
+      }
+    </style>
+
+    <div class="card">
+      <div class="header">
+        <h1>&lt;paper-search&gt;</h1>
+        <a class="version" href="https://github.com/first87/paper-search">v2.0.8a</a>
+        <a class="forked" href="https://github.com/Collaborne/paper-search">Collaborne/paper-search</a>
+      </div>
+
+      <div class="contents">
+
+        <h3>paper-search-bar</h3>
+        <div class="snippet">
+          <paper-search-bar id="searchBar"
+                            placeholder="Input a keyword"
+                            hide-filter-button="true">
+          </paper-search-bar>
+        </div>
+
+        <h3>paper-search-panel</h3>
+        <div class="snippet">
+          <paper-search-panel id="searchPanel" emitChanges
+                              search="{{search}}"
+                              count="[[resultsCount]]"
+                              items="[[searchResults]]"
+                              hide-filter-button="true"
+                              has-more="[[loading]]"
+                              loading="[[loading]]"
+                              placeholder="Search title or description"
+                              no-results-text="No matching result!"
+                              on-change-request-params="onRequestParamsChange">
+            <div class="search-results">
+              <template is="dom-repeat" items="{{searchResults}}">
+                <paper-item class="search-result-item" raised toggles role="menuitem">
+                  <paper-item-body two-line>
+                    <div class="title">[[item.title]]</div>
+                    <div class="desc" secondary>[[item.desc]]</div>
+                  </paper-item-body>
+                </paper-item>
+              </template>
+            </div>
+          </paper-search-panel>
+        </div>
+
+      </div>
+    </div>
+  </template>
+
+  <script>
+    class PaperSearchView extends Polymer.Element {
+      static get is() { return 'paper-search-view'; }
+
+      static get properties() {
+        return {
+          search: {
+            type: String,
+            value: null
+          },
+          resultsCount: {
+            type: Number,
+            value: 20
+          },
+          loading: {
+            type: Boolean,
+            value: false
+          },
+          searchResults: {
+            type: Array,
+            value: []
+          },
+          _items: {
+            type: Array,
+            value: [
+              {
+                title: 'First',
+                desc:  'The first item'
+              },
+              {
+                title: 'Second',
+                desc:  'The second item'
+              },
+              {
+                title: 'Third',
+                desc:  'The third item'
+              }
+            ],
+            readOnly: true
+          }
+        };
+      }
+
+      constructor() {
+        super();
+        this.searchResults = this._items;
+      }
+
+      onRequestParamsChange() {
+        this.loading = true;
+        this.search  = this.$.searchPanel.search;
+        this.showResultsCount = this.$.searchPanel.count;
+        this.doSearch(this.search);
+      }
+
+      doSearch(searchStr) {
+        this.searchResults = [];
+
+        // case insensitive search
+        searchStr = searchStr.toLowerCase();
+        this.searchResults = this._items.filter((item) => {
+          // return room if str match found in fields: name, description
+          return item.title.toLowerCase().indexOf(searchStr) !== -1 ||
+            item.desc.toLowerCase().indexOf(searchStr) !== -1;
+        });
+
+        // search ready
+        this.loading = false;
+      }
+    }
+
+    window.customElements.define(PaperSearchView.is, PaperSearchView);
+  </script>
+</dom-module>
