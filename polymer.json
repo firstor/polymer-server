@@ -6,7 +6,8 @@
     "src/views/icon-toggle-view.html",
     "src/views/hirst-dialog-view.html",
     "src/views/paper-item-view.html",
-    "src/views/paper-search-view.html"
+    "src/views/paper-search-view.html",
+    "src/views/paper-chip-view.html"
   ],
   "sources": [
     "src/**/*",
