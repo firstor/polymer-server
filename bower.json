@@ -14,15 +14,15 @@
     "iron-selector": "PolymerElements/iron-selector#^2.0.0",
     "paper-icon-button": "PolymerElements/paper-icon-button#^2.0.0",
     "paper-button": "PolymerElements/paper-button#^2.0.0",
-    "polymer": "Polymer/polymer#2.0.1",
+    "polymer": "Polymer/polymer#2.0.2",
     "webcomponentsjs": "webcomponents/webcomponentsjs#1.0.1",
     "icon-toggle": "first87/icon-toggle#0.0.2",
     "hirst-dialog": "first87/hirst-dialog#1.0.0",
+    "paper-chip": "first87/paper-chip#2.0.12a",
     "paper-item": "PolymerElements/paper-item#2.0.0",
     "paper-search": "first87/paper-search#2.0.8a"
   },
   "resolutions": {
-    "polymer": "2.0.1",
     "webcomponentsjs": "1.0.1"
   },
   "devDependencies": {

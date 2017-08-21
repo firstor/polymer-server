@@ -1,0 +1,85 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/paper-chip/paper-chip.html">
+<link rel="import" href="../../bower_components/paper-chip/paper-chip-input.html">
+<link rel="import" href="../../bower_components/paper-chip/paper-chip-input-autocomplete.html">
+<link rel="import" href="../shared-styles.html">
+
+<script src="../data/states.js"></script>
+
+<dom-module id="paper-chip-view">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+      paper-item-body {
+        /* IE 11 fix */
+        height: 0px;
+      }
+    </style>
+
+    <div class="card">
+      <div class="header">
+        <h1>&lt;paper-chip&gt;</h1>
+        <a class="version" href="https://github.com/first87/paper-chip">v2.0.12a</a>
+        <a class="forked" href="https://github.com/ThomasCybulski/paper-chip">ThomasCybulski/paper-chip</a>
+      </div>
+
+      <div class="contents">
+
+        <h3>paper-chip</h3>
+        <div class="snippet">
+          <paper-chip label="Basic with Avatar Text">
+            <span class="chip-background" slot="avatar">
+              <span>T</span>
+            </span>
+          </paper-chip>
+
+          <paper-chip label="Closable" closable></paper-chip>
+
+          <paper-chip label="Closable and icon" closable>
+            <span class="chip-background" slot="avatar">
+              <iron-icon icon="icons:favorite"></iron-icon>
+            </span>
+          </paper-chip>
+        </div>
+
+        <h3>paper-chip-input</h3>
+        <div class="snippet">
+          <paper-chip-input label="+Add (Enter) -Delete (Backspace)" items='["one", "two", "three"]' closable></paper-chip-input>
+
+          <paper-chip-input always-float-label label="+Add (Enter) -Delete (Backspace)">
+            <paper-chip label="Default Tag" slot="input"></paper-chip>
+            <paper-chip label="Default Tag Closable" closable slot="input"></paper-chip>
+          </paper-chip-input>
+
+          <paper-chip-input disabled label="+Add (Enter) -Delete (Backspace)" items='["one", "two", "three"]' closable></paper-chip-input>
+        </div>
+
+        <h3>paper-chip-input-autocomplete</h3>
+        <div class="snippet">
+          <paper-chip-input-autocomplete label="Type any state; +Add (Enter) -Delete (Backspace)" source="[[states]]" closable></paper-chip-input-autocomplete>
+        </div>
+
+      </div>
+    </div>
+  </template>
+
+  <script>
+    class PaperChipView extends Polymer.Element {
+      static get is() { return 'paper-chip-view'; }
+
+      static get properties() {
+        return {
+          states: {
+            type: Array,
+            value: states
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PaperChipView.is, PaperChipView);
+  </script>
+</dom-module>
