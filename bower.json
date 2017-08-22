@@ -18,7 +18,7 @@
     "webcomponentsjs": "webcomponents/webcomponentsjs#1.0.1",
     "icon-toggle": "first87/icon-toggle#0.0.2",
     "hirst-dialog": "first87/hirst-dialog#1.0.0",
-    "paper-chip": "first87/paper-chip#2.0.12a",
+    "paper-chip": "ThomasCybulski/paper-chip#2.0.12",
     "paper-item": "PolymerElements/paper-item#2.0.0",
     "paper-search": "Collaborne/paper-search#2.0.8"
   },
