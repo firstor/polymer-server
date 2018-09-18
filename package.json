@@ -8,8 +8,9 @@
     "start:es5": "polymer serve build/es5/ --port 3030",
     "start:bundled": "polymer serve build/bundled/ --port 3030",
     "start:unbundled": "polymer serve build/unbundled/ --port 3030",
-    "lint": "npm run lint:javascript && polymer lint",
-    "lint:javascript": "eslint . --ext js,html",
+    "lint": "npm run lint:js && npm run lint:polymer",
+    "lint:js": "eslint . --ext js,html",
+    "lint:polymer": "polymer lint",
     "test": "polymer test",
     "test:integration": "polymer build # test that psk builds without error with the CLI"
   },
