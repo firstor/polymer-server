@@ -12,6 +12,9 @@ jobs:
           name: Install local npm dependencies
           command: npm install
       - run:
+          name: Install bower
+          command: npm install -g bower
+      - run:
           name: Install local bower dependencies
           command: bower install
       - run:
