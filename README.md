@@ -1,6 +1,6 @@
 # Polymer Server
 
-[![Build Status](https://travis-ci.org/PolymerElements/polymer-server.svg?branch=master)](https://travis-ci.org/PolymerElements/polymer-server)
+[![CircleCI](https://circleci.com/gh/firstor/polymer-server.svg?style=svg)](https://circleci.com/gh/firstor/polymer-server)
 
 This is the fundamental project, to serve, experience, and test Polymer components
 in both development and production environment.
