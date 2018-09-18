@@ -68,38 +68,38 @@
         return {
           search: {
             type: String,
-            value: null
+            value: null,
           },
           resultsCount: {
             type: Number,
-            value: 20
+            value: 20,
           },
           loading: {
             type: Boolean,
-            value: false
+            value: false,
           },
           searchResults: {
             type: Array,
-            value: []
+            value: [],
           },
           _items: {
             type: Array,
             value: [
               {
                 title: 'First',
-                desc:  'The first item'
+                desc: 'The first item',
               },
               {
                 title: 'Second',
-                desc:  'The second item'
+                desc: 'The second item',
               },
               {
                 title: 'Third',
-                desc:  'The third item'
-              }
+                desc: 'The third item',
+              },
             ],
-            readOnly: true
-          }
+            readOnly: true,
+          },
         };
       }
 
@@ -110,7 +110,7 @@
 
       onRequestParamsChange() {
         this.loading = true;
-        this.search  = this.$.searchPanel.search;
+        this.search = this.$.searchPanel.search;
         this.showResultsCount = this.$.searchPanel.count;
         this.doSearch(this.search);
       }
