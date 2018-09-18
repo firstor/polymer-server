@@ -19,4 +19,4 @@ jobs:
           command: bower install
       - run:
          name: Linting
-         command: npm run lint
+         command: npm run lint:js
